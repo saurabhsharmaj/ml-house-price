@@ -88,13 +88,7 @@ docker run -p 5000:5000 ml-house-price:1.0
 The API will be accessible at:
 
 ```
-http://127.0.0.1:5000
-```
-
-```
-
-If you want, I can also:
-- Add badges (Python version, Docker, license)
-- Improve wording for public/open-source use
-- Split this into **Development** vs **Production** sections
+postman request POST 'http://127.0.0.1:5000/predict' \
+  --header 'Content-Type: application/json' \
+  --body '{"size":1400,"bedrooms":3,"age":2}'
 ```
