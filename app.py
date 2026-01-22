@@ -10,4 +10,6 @@ def predict():
     price = model.predict([[data['size'], data['bedrooms'], data['age']]])
     return jsonify({"predicted_price": int(price[0])})
 
-app.run(debug=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=5000, debug=False)
+
